@@ -1,6 +1,7 @@
 import curses
 import time
 
+
 def main(stdscr):
     curses.curs_set(0)
     stdscr.nodelay(True)
@@ -16,7 +17,8 @@ def main(stdscr):
             row = ""
             for x in range(20):
                 if x == player_x and y == player_y:
-                    row += "@"
+                    row += ("@")
+
                 else:
                     row += "."
             stdscr.addstr(y, 0, row)
@@ -35,5 +37,6 @@ def main(stdscr):
             break
 
         time.sleep(0.01)
+
 
 curses.wrapper(main)
